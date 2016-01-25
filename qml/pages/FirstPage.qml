@@ -9,6 +9,7 @@ import "storage.js" as Storage
 Page {
     id: page
     allowedOrientations: Orientation.All
+    Component.onCompleted: console.log(webView.url)
     SilicaWebView {
         PullDownMenu {
             MenuItem {
@@ -38,7 +39,7 @@ Page {
                 text: qsTr("Back to junat.net")
                 onClicked: {
                     console.log("Back to junat.net")
-                    webView.url = "http://www.junat.net/fi/"
+                    webView.url = "http://www.junat.net/"
                 }
             }
         }
@@ -49,7 +50,7 @@ Page {
         }
 
         anchors.fill: parent
-        url: "http://www.junat.net/fi/"
+        url: "http://www.junat.net/"
         quickScroll : true
         experimental.userScripts: [
             Qt.resolvedUrl("devicePixelRatioHack.js"),
