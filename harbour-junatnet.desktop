@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-junatnet
+Exec=sailfish-qml harbour-junatnet
+Name=junat.net
