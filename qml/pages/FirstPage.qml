@@ -10,8 +10,20 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     Component.onCompleted: console.log(webView.url)
+
+    property bool zoom: false
+
     SilicaWebView {
         PullDownMenu {
+            MenuLabel {
+                text: qsTr("Junat.net WebView version ") + "2"
+            }
+            MenuLabel {
+                text: qsTr("Current page:")
+            }
+            MenuLabel {
+                text: webView.title
+            }
             MenuItem {
                 text: qsTr("Reload")
                 onClicked: {
@@ -20,19 +32,17 @@ Page {
                 }
             }
             MenuItem {
-                text: qsTr("Set page as bookmark")
+                text: page.zoom ? qsTr("Smaller font (text won't overlap)") : qsTr("Bigger font (text may overlap)")
                 onClicked: {
-                    Storage.initialize()
-                    Storage.setSetting("bookmark", webView.url)
-                    console.log("se bookmark "+webView.url + " " + Storage.getSetting("bookmark"))
+                    page.zoom ? page.zoom = false : page.zoom = true
+                    webView.reload()
                 }
             }
             MenuItem {
-                text: qsTr("Open bookmark")
+                text: qsTr("Bookmarks")
                 onClicked: {
-                    Storage.initialize()
-                    webView.url = Storage.getSetting("bookmark")
-                    console.log("got bookmark "+Storage.getSetting("bookmark") + " " + webView.url)
+                    console.log("Opening bookmarks")
+                    pageStack.push(Qt.resolvedUrl("BookmarkPage.qml"),{"name": webView.title, "url": webView.url})
                 }
             }
             MenuItem {
@@ -50,10 +60,10 @@ Page {
         }
 
         anchors.fill: parent
-        url: "http://www.junat.net/"
+        url: window.webViewUrl
         quickScroll : true
         experimental.userScripts: [
-            Qt.resolvedUrl("devicePixelRatioHack.js"),
+            page.zoom ? Qt.resolvedUrl("devicePixelRatioHack.js") : Qt.resolvedUrl("devicePixelRatioHack2.js"),
         ]
     }
 }

@@ -47,4 +47,6 @@ INSTALLS += appicons qml desktop
 DISTFILES += \
     qml/pages/storage.js \
     translations/harbour-junatnet.ts \
-    translations/harbour-junatnet-fi.ts
+    translations/harbour-junatnet-fi.ts \
+    qml/pages/BookmarkPage.qml \
+    qml/pages/devicePixelRatioHack2.js

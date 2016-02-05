@@ -4,8 +4,10 @@ import "pages"
 
 ApplicationWindow
 {
+    id: window
     initialPage: Component { FirstPage { } }
-    cover: undefined//Qt.resolvedUrl("cover/CoverPage.qml")
+    property string webViewUrl: "http://www.junat.net/"
+    cover: undefined
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
 }
