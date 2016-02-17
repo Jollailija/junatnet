@@ -151,6 +151,7 @@ Page {
             width: parent.width
             onClicked: {
                 window.webViewUrl = model.url
+                console.log("model.url "+model.url)
                 pageStack.pop(undefined, PageStackAction.Immediate)
             }
             Label {

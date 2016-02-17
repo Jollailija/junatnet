@@ -13,11 +13,11 @@ Name:       harbour-junatnet
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Simple junatnet webview
-Version:    2
+Version:    3
 Release:    1
 Group:      Qt/Qt
-License:    NONE
-# URL:
+License:    BSD
+URL:        https://github.com/jollailija/junatnet
 Source0:    %{name}-%{version}.tar.bz2
 BuildArch: noarch
 Requires:   sailfishsilica-qt5 >= 0.10.9

@@ -49,12 +49,12 @@
         <translation>Kokeile hakea jotain muuta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="171"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="172"/>
         <source>Warning: deleting is instant</source>
         <translation>Varoitus: poistaminen on välitöntä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="174"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="175"/>
         <source>Delete</source>
         <translation>Poista</translation>
     </message>
@@ -62,42 +62,42 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="19"/>
+        <location filename="../qml/pages/FirstPage.qml" line="46"/>
         <source>Junat.net WebView version </source>
         <translation>Junat.net WebView versio </translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="22"/>
+        <location filename="../qml/pages/FirstPage.qml" line="49"/>
         <source>Current page:</source>
         <translation>Nykyinen sivu:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="28"/>
+        <location filename="../qml/pages/FirstPage.qml" line="55"/>
         <source>Reload</source>
         <translation>Päivitä (jos bugaa)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="35"/>
+        <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Smaller font (text won&apos;t overlap)</source>
         <translation>Pienempi fontti (ei päällekkäisyyksiä)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="35"/>
+        <location filename="../qml/pages/FirstPage.qml" line="62"/>
         <source>Bigger font (text may overlap)</source>
         <translation>Isompi fontti (sotkee joskus tekstin)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="42"/>
+        <location filename="../qml/pages/FirstPage.qml" line="69"/>
         <source>Bookmarks</source>
         <translation>Kirjanmerkit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="49"/>
+        <location filename="../qml/pages/FirstPage.qml" line="76"/>
         <source>Back to junat.net</source>
         <translation>Takaisin junat.nettiin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="59"/>
+        <location filename="../qml/pages/FirstPage.qml" line="86"/>
         <source>Loading...</source>
         <translation>Ladataan...</translation>
     </message>
