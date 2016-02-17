@@ -21,17 +21,21 @@ qml.path = /usr/share/harbour-junatnet/qml
 desktop.files = harbour-junatnet.desktop
 desktop.path = /usr/share/applications
 
+appicons.path = /usr/share/icons/hicolor/
+appicons.files = appicons/*
+
 OTHER_FILES += \
     qml/* \
     qml/pages/* \
+    qml/pages/storage.js \
+    qml/pages/BookmarkPage.qml \
+    qml/pages/devicePixelRatioHack2.js \
     rpm/harbour-junatnet.spec \
     translations/*.ts \
+    translations/harbour-junatnet.ts \
+    translations/harbour-junatnet-fi.ts \
     harbour-junatnet.desktop \
-    harbour-junatnet.png \
-    qml/harbour-junatnet.png \
-    rpm/harbour-junatnet.changes \
-    qml/pages/harbour-junatnet.png \
-    qml/harbour-junatnet.png
+    harbour-junatnet.png
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -39,14 +43,4 @@ CONFIG += sailfishapp_i18n
 
 TRANSLATIONS += translations/harbour-junatnet-fi.ts
 
-appicons.path = /usr/share/icons/hicolor/
-appicons.files = appicons/*
-
 INSTALLS += appicons qml desktop
-
-DISTFILES += \
-    qml/pages/storage.js \
-    translations/harbour-junatnet.ts \
-    translations/harbour-junatnet-fi.ts \
-    qml/pages/BookmarkPage.qml \
-    qml/pages/devicePixelRatioHack2.js

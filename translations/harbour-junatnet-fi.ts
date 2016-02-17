@@ -62,42 +62,42 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="46"/>
+        <location filename="../qml/pages/FirstPage.qml" line="50"/>
         <source>Junat.net WebView version </source>
         <translation>Junat.net WebView versio </translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="49"/>
+        <location filename="../qml/pages/FirstPage.qml" line="53"/>
         <source>Current page:</source>
         <translation>Nykyinen sivu:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="55"/>
+        <location filename="../qml/pages/FirstPage.qml" line="59"/>
         <source>Reload</source>
         <translation>Päivitä (jos bugaa)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="62"/>
+        <location filename="../qml/pages/FirstPage.qml" line="66"/>
         <source>Smaller font (text won&apos;t overlap)</source>
         <translation>Pienempi fontti (ei päällekkäisyyksiä)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="62"/>
+        <location filename="../qml/pages/FirstPage.qml" line="66"/>
         <source>Bigger font (text may overlap)</source>
         <translation>Isompi fontti (sotkee joskus tekstin)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="69"/>
+        <location filename="../qml/pages/FirstPage.qml" line="73"/>
         <source>Bookmarks</source>
         <translation>Kirjanmerkit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="76"/>
+        <location filename="../qml/pages/FirstPage.qml" line="80"/>
         <source>Back to junat.net</source>
         <translation>Takaisin junat.nettiin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/FirstPage.qml" line="86"/>
+        <location filename="../qml/pages/FirstPage.qml" line="89"/>
         <source>Loading...</source>
         <translation>Ladataan...</translation>
     </message>
