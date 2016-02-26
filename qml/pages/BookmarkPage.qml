@@ -86,6 +86,7 @@ Page {
             MenuItem {
                 text: qsTr("Add current page to bookmarks:")
                 onClicked: {
+                    bookmarkModel.clear()
                     Storage.initialize()
                     Storage.addBookmark(name, url)
                     console.log("Added bookmark " + name + " : " + url)
@@ -130,7 +131,6 @@ Page {
                     }
                 }
             }
-
         }
 
         ViewPlaceholder {
@@ -145,13 +145,11 @@ Page {
         }
         model: bookmarkPage.searchMode ? filteredModel : bookmarkModel
 
-
         delegate: ListItem {
             id: delegate
             width: parent.width
             onClicked: {
-                window.webViewUrl = model.url
-                console.log("model.url "+model.url)
+                webView.url = model.url // Thanks to my way of doing stuff, we can set the url from here without extra variables
                 pageStack.pop(undefined, PageStackAction.Immediate)
             }
             Label {

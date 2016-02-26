@@ -51,22 +51,6 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Reload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Loading...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Back to junat.net</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Current page:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -79,7 +63,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Junat.net WebView version </source>
+        <source>Junat.net WebView version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide navigation bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open navigation bar</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

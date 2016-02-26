@@ -13,8 +13,8 @@ Name:       harbour-junatnet
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Simple junatnet webview
-Version:    3
-Release:    2
+Version:    4
+Release:    1
 Group:      Qt/Qt
 License:    BSD
 URL:        https://github.com/jollailija/junatnet

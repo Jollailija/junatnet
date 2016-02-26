@@ -36,18 +36,75 @@ import "storage.js" as Storage
 Page {
     id: page
     allowedOrientations: Orientation.All
-    Component.onCompleted: console.log(webView.url)
+    BookmarkPage {id: bookmarkPage} // just don't. I know it's wrong, but the freaking bug won't die!
 
-    property bool zoom: false
+    property bool zoom: false // This is for choosing the pixelratiohack
+
+    DockedPanel {
+        id: navPanel
+        dock: Dock.Bottom
+        width: parent.width
+        height: Theme.itemSizeSmall
+        open: true // todo: open and close on scroll
+        _immediate: true // no lag when opening or closing
+
+        Row {
+            anchors.centerIn: parent
+            spacing: Theme.paddingLarge
+            IconButton {
+                icon.source: "image://theme/icon-m-back"
+                onClicked: webView.goBack()
+                enabled: webView.canGoBack
+            }
+            IconButton {
+                icon.source: "image://theme/icon-m-refresh"
+                onClicked: webView.reload()
+            }
+            IconButton {
+                icon.source: "image://theme/icon-m-train"
+                // lol, the train image is perfect for this!
+                // here's a generic home icon:
+                // "image://theme/icon-m-home"
+                onClicked: webView.url = "http://www.junat.net/"
+            }
+            IconButton {
+                icon.source: "image://theme/icon-m-favorite"
+                onClicked: pageStack.push(bookmarkPage,{"name": webView.title, "url": webView.url})
+            }
+            IconButton {
+                icon.source: "image://theme/icon-m-forward"
+                onClicked: webView.goForward()
+                enabled: webView.canGoForward
+            }
+        }
+    }
 
     // Rewritten for easier readability: all important stuff is at the top
     SilicaWebView {
-	    id: webView
-	    anchors.fill: parent
-	    url: window.webViewUrl
+        id: webView
+        anchors {
+            fill: parent
+            bottomMargin: navPanel.visibleSize
+        }
+        url: "http://www.junat.net/"
         PullDownMenu {
             MenuLabel {
-                text: qsTr("Junat.net WebView version ") + "3"
+                text: qsTr("Junat.net WebView version") + " 4"
+            }
+            MenuItem {
+                text: page.zoom ? qsTr("Smaller font (text won't overlap)")
+                                : qsTr("Bigger font (text may overlap)")
+                onClicked: {
+                    page.zoom ? page.zoom = false : page.zoom = true
+                    webView.reload()
+                }
+            }
+            MenuItem {
+                text: navPanel.open ? qsTr("Hide navigation bar")
+                                : qsTr("Open navigation bar")
+                onClicked: {
+                    navPanel.open ? navPanel.open = false : navPanel.open = true
+                }
             }
             MenuLabel {
                 text: qsTr("Current page:")
@@ -55,25 +112,17 @@ Page {
             MenuLabel {
                 text: webView.title
             }
-            MenuItem {
+            /*MenuItem {
                 text: qsTr("Reload")
                 onClicked: {
                     console.log("Reload")
                     webView.reload()
                 }
-            }
-            MenuItem {
-                text: page.zoom ? qsTr("Smaller font (text won't overlap)") : qsTr("Bigger font (text may overlap)")
-                onClicked: {
-                    page.zoom ? page.zoom = false : page.zoom = true
-                    webView.reload()
-                }
-            }
-            MenuItem {
+            }*/
+            /*MenuItem {
                 text: qsTr("Bookmarks")
                 onClicked: {
-                    console.log("Opening bookmarks")
-                    pageStack.push(Qt.resolvedUrl("BookmarkPage.qml"),{"name": webView.title, "url": webView.url})
+                    pageStack.push(bookmarkPage,{"name": webView.title, "url": webView.url})
                 }
             }
             MenuItem {
@@ -82,11 +131,12 @@ Page {
                     console.log("Back to junat.net")
                     webView.url = "http://www.junat.net/"
                 }
-            }
+            }*/
         }
-        ViewPlaceholder {
-            visible: webView.loading
-            text: qsTr("Loading...")
+        BusyIndicator {
+            anchors.centerIn: parent
+            running: webView.loading
+            size: BusyIndicatorSize.Large
         }
         experimental.userScripts: [
             page.zoom ? Qt.resolvedUrl("devicePixelRatioHack.js") : Qt.resolvedUrl("devicePixelRatioHack2.js"),

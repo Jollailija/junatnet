@@ -106,7 +106,7 @@ function getBookmarksFromDB(modelToInsertTo) {
     db.transaction(function(tx) {
         var rs = tx.executeSql('SELECT name,url FROM bookmarks;');
         for (var i = 0; i < rs.rows.length; i++) {
-            modelToInsertTo.append({"name": rs.rows.item(i).name, "url": rs.rows.item(i).url})
+            modelToInsertTo.insert(i,{"name": rs.rows.item(i).name, "url": rs.rows.item(i).url})
         }
     })
     console.log("Bookmarks inserted into list " + modelToInsertTo)

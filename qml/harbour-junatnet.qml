@@ -34,8 +34,7 @@ import "pages"
 ApplicationWindow
 {
     id: window
-    initialPage: Component { FirstPage { } }
-    property string webViewUrl: "http://www.junat.net/"
+    initialPage: FirstPage {}
     cover: undefined
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
