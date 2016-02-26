@@ -29,32 +29,32 @@
         <translation>Hae...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="139"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="138"/>
         <source>No bookmarks</source>
         <translation>Ei kirjanmerkkejä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="140"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="139"/>
         <source>Pull down to add current page to bookmarks</source>
         <translation>Vedä alaspäin lisätäksesi nykyisen sivun kirjanmerkkeihin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="144"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="143"/>
         <source>Nothing was found</source>
         <translation>Mitään ei löytynyt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="145"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="144"/>
         <source>Try a different search term</source>
         <translation>Kokeile hakea jotain muuta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="172"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="170"/>
         <source>Warning: deleting is instant</source>
         <translation>Varoitus: poistaminen on välitöntä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="175"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="173"/>
         <source>Delete</source>
         <translation>Poista</translation>
     </message>
