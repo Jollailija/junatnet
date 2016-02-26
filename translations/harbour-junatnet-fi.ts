@@ -84,12 +84,12 @@
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="103"/>
         <source>Hide navigation bar</source>
-        <translation>Piilota työkalurivi</translation>
+        <translation>Piilota navigaatiopalkki</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="104"/>
         <source>Open navigation bar</source>
-        <translation>Näytä työkalurivi</translation>
+        <translation>Näytä navigaatiopalkki</translation>
     </message>
 </context>
 </TS>
