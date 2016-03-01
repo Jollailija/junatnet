@@ -49,12 +49,12 @@
         <translation>Kokeile hakea jotain muuta</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="170"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="175"/>
         <source>Warning: deleting is instant</source>
         <translation>Varoitus: poistaminen on välitöntä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarkPage.qml" line="173"/>
+        <location filename="../qml/pages/BookmarkPage.qml" line="178"/>
         <source>Delete</source>
         <translation>Poista</translation>
     </message>

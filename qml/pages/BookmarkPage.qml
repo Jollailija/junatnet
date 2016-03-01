@@ -152,7 +152,8 @@ Page {
                 webView.url = model.url // Thanks to my way of doing stuff, we can set the url from here without extra variables
                 pageStack.pop(undefined, PageStackAction.Immediate)
             }
-            Label {
+            Text {
+                id: listText
                 text: Theme.highlightText(model.name, searchString, Theme.highlightColor)
                 textFormat: Text.StyledText
                 color: highlighted ? Theme.highlightColor : Theme.primaryColor
@@ -161,7 +162,11 @@ Page {
                                 : Theme.fontSizeMedium
                 anchors.verticalCenter: parent.verticalCenter
                 x: Theme.paddingLarge
-                truncationMode: TruncationMode.Elide
+                //truncationMode: TruncationMode.Elide
+                elide: Text.ElideRight
+                wrapMode: Text.Wrap
+                clip: true
+                maximumLineCount: 2
                 width: bookmarkPage.editMode ? parent.width - ((moveUp.width * 2) + (Theme.paddingLarge * 2))
                                              : parent.width - Theme.paddingLarge
             }
@@ -177,6 +182,13 @@ Page {
                         loadList()
                     }
                 }
+            }
+            Separator {
+                //alignment: Qt.AlignHCenter Yeah, reference documentation is still not fixed :(
+                width: parent.width - (2 * Theme.paddingLarge)
+                anchors.bottom: parent.bottom
+                color: Theme.secondaryColor
+                x: Theme.paddingLarge
             }
         }
         /*IconButton {

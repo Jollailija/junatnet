@@ -34,7 +34,7 @@ import "pages"
 ApplicationWindow
 {
     id: window
-    initialPage: FirstPage {}
+    initialPage: Component {FirstPage {}}
     cover: undefined
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All

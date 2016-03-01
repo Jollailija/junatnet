@@ -89,7 +89,7 @@ Page {
         url: "http://www.junat.net/"
         PullDownMenu {
             MenuLabel {
-                text: qsTr("Junat.net WebView version") + " 4"
+                text: qsTr("Junat.net WebView version") + " 5"
             }
             MenuItem {
                 text: page.zoom ? qsTr("Smaller font (text won't overlap)")
